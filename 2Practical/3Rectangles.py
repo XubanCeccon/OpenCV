@@ -2,13 +2,18 @@ import cv2
 import numpy as np
 coordinates_of_rectangle = [0,0,0,0]
 
-def draw_rectangle(coordinates, img):
+def draw_rectangle(coordinates, img, x, y):
     print("function executed succesfully")
     print(coordinates)
     #x1 y1         x2 y2
-    img[coordinates[0],coordinates[1]] = [256, 0, 0]
-    img[100,100] = [256, 0, 0]
+    img[y,x] = [0, 0, 0]  # Set the pixel to Black
+    img[coordinates[1],coordinates[0]] = [0, 0, 0]  # Set the pixel to Black
+    for i in range (-2,3):
+        for j in range (-2,3):
+                img[coordinates[0]+i, coordinates[1]+j] = [0, 0, 155] 
 
+
+    
     
 
 # Mouse callback function
@@ -23,14 +28,13 @@ def colour_query_mouse_callback(event, x, y, flags, img):
     elif event == cv2.EVENT_LBUTTONUP:
         coordinates_of_rectangle[2] = x
         coordinates_of_rectangle[3] = y
-        draw_rectangle(coordinates_of_rectangle,img)
+        draw_rectangle(coordinates_of_rectangle,img,x,y)
         print("button up in coordinates "+str(x)+ ", "+str(y) )
         
 
 
         
     elif event == cv2.EVENT_RBUTTONDOWN:
-        # Right button sets color information at click location to white
         print(f"Colour information at image location ({x},{y}) set to white.", end=" ")
         img[y, x] = [255, 0, 0]  # Set the pixel to RED
 
