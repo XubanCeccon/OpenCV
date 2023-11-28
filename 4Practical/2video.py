@@ -26,6 +26,8 @@ def main():
         #cv2.absdiff(img_original,img_inverted,diff1)
 
         output_img = cv2.GaussianBlur(img, (111, 11), 10, 0)
+        cv2.circle(output_img,(447,63), 63, (0,0,255), -1)
+
        # output_img =
 
         cv2.imshow(window_name, output_img)
