@@ -14,3 +14,6 @@ python3 provided.py ../Images/CranfieldAirport.jpeg
 python3 1inverted.py ../Images/Donosti.png inverted.jpg
 python3 1inverted.py inverted.jpg twiceInverted.jpg
 
+
+## 4Practical
+- To run the facial recognition tracker use: python3 99face_recognition.py haarcascade_frontalface_default.xml
