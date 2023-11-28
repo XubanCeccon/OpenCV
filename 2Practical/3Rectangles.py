@@ -7,11 +7,20 @@ def draw_rectangle(coordinates, img, x, y):
     print(coordinates)
     #x1 y1         x2 y2
     img[y,x] = [0, 0, 0]  # Set the pixel to Black
-    img[coordinates[1],coordinates[0]] = [0, 0, 0]  # Set the pixel to Black
-    for i in range (-2,3):
-        for j in range (-2,3):
-                img[coordinates[0]+i, coordinates[1]+j] = [0, 0, 155] 
-
+    for i in range (-10,11):
+        for j in range (-10,11):
+                img[coordinates[1]+j, coordinates[0]+i] = [0, 255, 0] 
+                print("here is x:" + str(x) + " Here is coordinate[0]: "+str(coordinates[0]))
+                #img[y+j,x+i] = [255, 0, 0] 
+    for i in range (-10,11):
+        for j in range (-10,11):
+                img[coordinates[3]+j, coordinates[2]+i] = [0, 0, 255] 
+                print("here is x:" + str(x) + " Here is coordinate[0]: "+str(coordinates[0]))
+                #img[y+j,x+i] = [255, 0, 0] 
+    for i in range(coordinates[2]-coordinates[0]):
+        for j in range (coordinates[3]-coordinates[1]):
+             img[coordinates[1]+j, coordinates[0]+i] = [255, 0, 0] 
+             print("here is x:" + str(x) + " Here is coordinate[0]: "+str(coordinates[0]))
 
     
     
