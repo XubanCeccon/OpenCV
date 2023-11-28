@@ -24,8 +24,6 @@ def draw_rectangle(coordinates, img, x, y):
 
     
     
-
-# Mouse callback function
 def colour_query_mouse_callback(event, x, y, flags, img):
     if event == cv2.EVENT_LBUTTONDOWN:
         print("button down in coordinates "+str(x)+ ", "+str(y) )

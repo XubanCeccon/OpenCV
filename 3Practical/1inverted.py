@@ -17,8 +17,7 @@ def main():
 
     output_img = cv2.bitwise_not(input_img)
 
-    cv2.imwrite(output_image_name, output_img, [cv2.IMWRITE_JPEG_QUALITY, 80])
-    cv2.imwrite(output_image_name, output_img, [cv2.CV_IMWRITE_PNG_COMPRESSION, 80])
+    cv2.imwrite(output_image_name, output_img, [cv2.IMWRITE_JPEG_QUALITY, 5])
 
 
 
