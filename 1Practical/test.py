@@ -22,10 +22,5 @@ else:
     cv2.imshow('Canny image', canny_image)
     cv2.imshow('Resized image', resized_image)
 
-
-
-
-    
     cv2.waitKey(0)
     cv2.destroyAllWindows()
-
