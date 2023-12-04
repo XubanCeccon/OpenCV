@@ -1,4 +1,4 @@
-# OpenCV
+# ImageProcessing and Analysis
 
 
 Folders corresponds to Practical sessions. 
@@ -17,3 +17,9 @@ python3 1inverted.py inverted.jpg twiceInverted.jpg
 
 ## 4Practical
 - To run the facial recognition tracker use: python3 99face_recognition.py haarcascade_frontalface_default.xml
+
+
+
+
+
+# Computer vision
